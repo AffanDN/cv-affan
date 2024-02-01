@@ -1,4 +1,8 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+  --secondary-color:#5655da;
+  --primary-text-color:#2c2c2c;
+}
 
 * {
   margin: 0;
@@ -12,108 +16,286 @@ button {
   cursor: pointer;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 aside {
-  background-color: #5655da;
+  background-color: var( --secondary-color);
   /* background-color: rgb(86, 85, 218); */
   /* background-color: hsl(240, 64%, 59%); */
 }
 
-.name {
-  font-size: 30px;
-  font-weight: 700;
-  color: #fff;
-  /* color: white; */
-  margin: 0 0 5px;
-  /* margin: top right bottom left; */
-  text-wrap: wrap;
+@media screen and (min-width:768px){
+  .name {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    /* color: white; */
+    margin: 0 0 5px;
+    /* margin: top right bottom left; */
+    text-wrap: wrap;
+  }
+   
+  section h1 {
+    color: #f74470;
+    font-size: 17px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  
+  #aboutme {
+    margin-bottom: 40px;
+  }
+  
+  #aboutme button {
+    background-color: #5655da;
+    color: #fff;
+    border-radius: 3px;
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: -12px;
+    padding: 5px 10px;
+  }
+  
+  #aboutme > .desc {
+    line-height: 28px;
+  }
+  
+  #aboutme .title {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  
+  #aboutme .info {
+    margin-top: 40px;
+    padding: 0;
+  }
+  
+  #aboutme .info p{
+    padding: 7px 0;
+  }
+  
+  .tabitem {
+    color: #9e9e9e;
+  }
+  
+  .tabitem:hover {
+    color: var(--primary-text-color);
+  }
+  
+  .tabitem::first-letter {
+    font-weight: 700;
+  }
+  
+  .active {
+    color: #1a1a1a;
+  }
+  
+  .contact {
+    margin-bottom: 250px;
+  }
+  
+  /* input[type="text"] {
+    background-color: gray;
+  } */
+  
+  .skills .name {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin: 0;
+    font-weight: normal;
+  }
+  
+  /* img + .name:hover {
+    border: 4px solid gold;
+  } */
+  
+  /* section:nth-child(3) {
+    position: sticky;
+    top: 20px;
+    bottom: 20px;
+    background-color: #5655da;
+  } */
+  
+  body {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
+  aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-height: 100vh;
+    flex: 1;
+    position: sticky;
+    top: 0;
+    padding: 46px 70px;
+  }
+  
+  .profile {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  .profile > img {
+      border-radius: 50%;
+      margin: 0 auto;
+  
+  }
+  
+  /* .profile > .detail {
+    padding: 0 10%;
+  } */
+  
+  .profile .job {
+    color: #d8d8e9;
+  }
+  
+  .socmed {
+    display: flex;
+    margin: 20px 0;
+  }
+  
+  .socmed .icon {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    gap: 24px;
+  }
+  
+  main {
+    flex: 4.5;
+  }
+  
+  main > section {
+    padding: 60px 70px 60px 70px;
+    border-bottom: 1px solid #e9e0e0;
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    gap: 5px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+  }
+  
+  #aboutme .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .skills .skill-detail {
+    display: grid;
+    margin-top: 40px;
+    grid-template-columns: 80% 20%;
+    grid-template-areas: 
+    "name percent"
+    "pbar pbar";
+  }
+  
+  .skill-detail .name {
+    grid-area: name;
+  }
+  
+  .skill-detail .percent {
+    text-align: right;
+    grid-area: percent;
+  }
+  
+  .skill-detail .graph {
+    border-radius: 20px 20px 20px 20px;
+    grid-area: pbar;
+    background-color: #9e9e9e;
+    height: 5px;
+  }
+  
+  .graph .progress{
+    border-radius: 20px 0px 0px 20px;
+    background-color: #f74470;
+    height: 100%;
+  }
+  
+  .w90 {
+    width: 90%;
+  }
+  
+  .w80 {
+    width: 80%;
+  }
+  
+  .w45 {
+    width: 45%;
+  }
+  
+  .w60 {
+    width: 60%;
+  }
+  
+  #contact .input-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-areas: 
+    "nama email"
+    "phone subject"
+    "msg msg";
+    row-gap: 30px;
+    column-gap: 15px;
+  }
+  
+  .input-form textarea {
+    grid-area: msg;
+    resize: none;
+  }
+  
+  .input-form input, .input-form textarea {
+    padding: 20px 0;
+    border: none;
+    border-bottom: solid 1px #1a1a1a;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .input-form input:focus, .input-form textarea:focus {
+    outline: none;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  #contact button {
+    margin-top: 15px;
+    background-color: #5655da;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 2px;
+  }
 }
 
-.tabitem {
-  color: #9e9e9e;
+@media screen and (max-width:850px) {
+  main {
+    padding: 0 35px;
+  }
+
+  aside {
+    padding: 0 23px;
+  }
 }
 
-.tabitem:hover {
-  color: #1a1a1a;
+@media screen and (max-width:640px){
+  aside{
+    display: none;
+  }
 }
 
-.tabitem::first-letter {
-  font-weight: 700;
-}
-
-.active {
-  color: #1a1a1a;
-}
-
-.contact {
-  margin-bottom: 250px;
-}
-
-input[type="text"] {
-  background-color: gray;
-}
-
-.skills .name {
-  font-size: 14px;
-  color: #1a1a1a;
-  margin: 0;
-  font-weight: normal;
-}
-
-/* img + .name:hover {
-  border: 4px solid gold;
-} */
-
-/* section:nth-child(3) {
-  position: sticky;
-  top: 20px;
-  bottom: 20px;
-  background-color: #5655da;
-} */
-
-body {
-  display: flex;
-  flex-direction: row-reverse;
-}
-
-aside {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-height: 100vh;
-  flex: 1;
-  position: sticky;
-  top: 0;
-}
-
-.profile {
-  flex: 6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.profile > img {
-    border-radius: 50%;
-}
-
-.profile > .detail {
-  padding: 0 10%;
-}
-
-.socmed {
-  flex: 1;
-}
-
-main {
-  flex: 2.8;
-}
-
-.socmed {
-  display: flex;
-}
-
-nav {
-  display: flex;
-  flex-direction: column;
-  flex: 3;
-}

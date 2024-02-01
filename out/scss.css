@@ -1,0 +1,96 @@
+#aboutme {
+  margin-bottom: 40px;
+}
+#aboutme button {
+  background-color: #5655da;
+  color: #fff;
+  border-radius: 3px;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: -12px;
+  padding: 5px 10px;
+}
+#aboutme .title {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+#aboutme .desc {
+  line-height: 28px;
+}
+#aboutme .info {
+  margin-top: 40px;
+  padding: 0;
+}
+#aboutme .info p {
+  padding: 7px 0;
+}
+
+#contact .input-form input {
+  padding: 20px 0;
+  border: none;
+  border-bottom: solid 1px #1a1a1a;
+  font-size: 14px;
+  font-weight: 300;
+  color: aqua;
+}
+#contact .input-form input :focus {
+  outline: none;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+}
+#contact .input-form textarea {
+  padding: 20px 0;
+  border: none;
+  border-bottom: solid 1px #1a1a1a;
+  font-size: 14px;
+  font-weight: 300;
+}
+#contact .input-form textarea :focus {
+  outline: none;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+aside {
+  background-color: #f74470;
+  /* background-color: rgb(86, 85, 218); */
+  /* background-color: hsl(240, 64%, 59%); */
+}
+
+.profile .job {
+  background-color: #5655da;
+  color: #2c2c2c;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.profile img {
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.profile .job {
+  color: #d8d8e9;
+  text-align: center;
+  font-size: 300px;
+}
+
+/*# sourceMappingURL=scss.css.map */

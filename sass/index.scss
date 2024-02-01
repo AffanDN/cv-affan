@@ -1,0 +1,53 @@
+@use 'sass:math';
+@use 'aboutme';
+@use 'contact';
+$secondary-color:#5655da;
+$primary-text-color:#2c2c2c;
+$width:1500px;
+$column:5;
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  aside {
+    background-color: aboutme.$secondary-color;
+    /* background-color: rgb(86, 85, 218); */
+    /* background-color: hsl(240, 64%, 59%); */
+  }
+
+  %p{
+    background-color: $secondary-color;
+    color: $primary-text-color;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    img {
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+    .job{
+        @extend %p;
+        color: #d8d8e9;
+        text-align: center;
+        //math.ceil = dibulatkan keatas//
+        font-size: math.div($width,$column);
+    }
+  }
+
+

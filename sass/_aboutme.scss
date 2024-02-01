@@ -1,0 +1,29 @@
+$secondary-color:#f74470;
+#aboutme {
+    margin-bottom: 40px;
+    button {
+        background-color: #5655da;
+        color: #fff;
+        border-radius: 3px;
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: -12px;
+        padding: 5px 10px;
+    }
+    .title {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+    .desc {
+        line-height: 28px;
+    }
+    .info {
+        margin-top: 40px;
+        padding: 0;
+        p{
+            padding: 7px 0;
+        }
+    }
+  }

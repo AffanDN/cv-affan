@@ -1,0 +1,30 @@
+@mixin textinput(){
+    padding: 20px 0;
+    border: none;
+    border-bottom: solid 1px #1a1a1a;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+@mixin focusinput($transparancy:0.2) {
+    outline: none;
+    border-bottom-color: rgba(0, 0, 0, $transparancy);
+}
+
+#contact {
+    .input-form{
+        input {
+            @include textinput();
+            color: aqua;
+            :focus{
+                @include focusinput();
+            }
+        }
+        textarea{
+            @include textinput();
+            :focus{
+                @include focusinput();
+            }
+        }
+    }
+}
